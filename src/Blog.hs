@@ -1,5 +1,5 @@
 {-# LANGUAGE DeriveGeneric #-}
-module Lib
+module Blog
   ( someFunc,
     Activity (BlogPost, Comment),
   )

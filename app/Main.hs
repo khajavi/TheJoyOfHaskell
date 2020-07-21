@@ -1,10 +1,11 @@
 module Main where
 
-import qualified Data.ByteString.Lazy.Internal as C
-import Data.Aeson
-import Data.List
 import Control.Arrow
-import Lib
+import Data.Aeson
+import qualified Data.ByteString.Lazy.Internal as C
+import Data.List
+import EqualityTypeClass
+import Blog
 
 main :: IO ()
 main = do activitiesEither <- eitherDecodeFileStrict "input.json" :: IO(Either String [Activity])
@@ -13,15 +14,13 @@ main = do activitiesEither <- eitherDecodeFileStrict "input.json" :: IO(Either S
                             (Left e) -> "Something went wrong" ++ e
                in (putStrLn output)
           
-          
 process :: [Activity] -> C.ByteString
-process activities = encode $ onlyComments activities 
+process activities = encode $ onlyComments activities
 
 onlyComments :: [Activity] -> [Activity]
 onlyComments = filter isComment
 
-isComment :: Activity -> Bool 
-isComment (Comment _ _)   = True
+isComment :: Activity -> Bool
+isComment (Comment _ _) = True
 isComment _ = False
-
 
