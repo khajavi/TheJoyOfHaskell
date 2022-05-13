@@ -1,9 +1,9 @@
 name:                TheJoyOfHaskell
 version:             0.1.0.0
-github:              "githubuser/TheJoyOfHaskell"
+github:              "khajavi/TheJoyOfHaskell"
 license:             BSD3
-author:              "Author name here"
-maintainer:          "example@example.com"
+author:              "Milad Khajavi"
+maintainer:          "khajavi@gmail.com"
 copyright:           "2020 Author name here"
 
 extra-source-files:
@@ -20,7 +20,7 @@ extra-source-files:
 description:         Please see the README on GitHub at <https://github.com/githubuser/TheJoyOfHaskell#readme>
 
 dependencies:
-- base >= 4.7 && < 5
+- base
 - aeson
 - bytestring
 
@@ -38,7 +38,7 @@ executables:
     dependencies:
     - TheJoyOfHaskell
 
-  typeclass-exe:
+  typeclass:
     main:                Main.hs
     source-dirs:         app/typeclass
     ghc-options:

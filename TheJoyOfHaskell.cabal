@@ -1,18 +1,18 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.33.0.
+-- This file has been generated from package.yaml by hpack version 0.34.4.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 483cbc6839913d9ba35d56e1a1db652b7ac67ac1164981abaaf86fb36ca0b9dd
+-- hash: 8590b4bb0fd4da6ad59c40bba81f1f15967501b22546f12816f3728f409403bd
 
 name:           TheJoyOfHaskell
 version:        0.1.0.0
 description:    Please see the README on GitHub at <https://github.com/githubuser/TheJoyOfHaskell#readme>
-homepage:       https://github.com/githubuser/TheJoyOfHaskell#readme
-bug-reports:    https://github.com/githubuser/TheJoyOfHaskell/issues
-author:         Author name here
-maintainer:     example@example.com
+homepage:       https://github.com/khajavi/TheJoyOfHaskell#readme
+bug-reports:    https://github.com/khajavi/TheJoyOfHaskell/issues
+author:         Milad Khajavi
+maintainer:     khajavi@gmail.com
 copyright:      2020 Author name here
 license:        BSD3
 license-file:   LICENSE
@@ -23,7 +23,7 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/TheJoyOfHaskell
+  location: https://github.com/khajavi/TheJoyOfHaskell
 
 library
   exposed-modules:
@@ -35,7 +35,7 @@ library
       src
   build-depends:
       aeson
-    , base >=4.7 && <5
+    , base
     , bytestring
   default-language: Haskell2010
 
@@ -49,11 +49,11 @@ executable TheJoyOfHaskell-exe
   build-depends:
       TheJoyOfHaskell
     , aeson
-    , base >=4.7 && <5
+    , base
     , bytestring
   default-language: Haskell2010
 
-executable typeclass-exe
+executable typeclass
   main-is: Main.hs
   other-modules:
       Paths_TheJoyOfHaskell
@@ -63,7 +63,7 @@ executable typeclass-exe
   build-depends:
       TheJoyOfHaskell
     , aeson
-    , base >=4.7 && <5
+    , base
     , bytestring
   default-language: Haskell2010
 
@@ -78,6 +78,6 @@ test-suite TheJoyOfHaskell-test
   build-depends:
       TheJoyOfHaskell
     , aeson
-    , base >=4.7 && <5
+    , base
     , bytestring
   default-language: Haskell2010
